@@ -1,11 +1,24 @@
 import { motion } from 'framer-motion'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
-import { FaBriefcase, FaExchangeAlt } from 'react-icons/fa'
+import { FaBriefcase, FaExchangeAlt, FaHospital } from 'react-icons/fa'
 import skillSwapBanner from '../assets/SkillSwap.png'
 import connectWithBanner from '../assets/connectwith-banner.png'
+import hmsBanner from '../assets/HMS.png'
 
 const Projects = () => {
   const projects = [
+    {
+      title: 'Hospital Management System',
+      period: 'June 2026 – Present',
+      description:
+        'Built a full-stack hospital administration platform to manage patient records, appointments, staff workflows, and department operations with a clean and secure dashboard experience. Designed for efficient healthcare administration and better service delivery.',
+      tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Admin Dashboard'],
+      icon: <FaHospital />,
+      color: '#32c6a6',
+      image: hmsBanner,
+      liveUrl: 'https://hospital-administration-beige.vercel.app/',
+      codeUrl: 'https://github.com/abinivesh1696/Hospital-Administration-THIS',
+    },
     {
       title: 'Job Portal Website',
       period: 'April 2026 – June 2026',
