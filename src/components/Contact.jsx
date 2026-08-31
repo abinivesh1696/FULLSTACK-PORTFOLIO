@@ -18,7 +18,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     const mailtoLink = `mailto:abiniveshk@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`
-    window.open(mailtoLink)
+    window.location.href = mailtoLink
   }
 
   const contactItems = [
@@ -64,7 +64,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Get In Touch
+          Let’s Connect
         </motion.h2>
         <motion.p
           className="section-subtitle"
@@ -73,7 +73,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Have a project in mind? Let's work together!
+          Have a project in mind or an opportunity to discuss? I’d love to hear from you.
         </motion.p>
 
         <div className="contact-grid">
@@ -85,11 +85,11 @@ const Contact = () => {
             transition={{ duration: 0.7 }}
           >
             <h3>
-              Let's Build <span className="gradient-text">Something Amazing</span>
+              Let’s build <span className="gradient-text">something meaningful.</span>
             </h3>
             <p>
-              I'm always open to discussing new projects, creative ideas, or opportunities 
-              to be part of your vision. Feel free to reach out through use the contact form.
+              I’m open to conversations around full-stack development work, product thinking, and opportunities
+              to contribute to thoughtful digital experiences.
             </p>
 
             <div className="contact-items">
@@ -149,7 +149,7 @@ const Contact = () => {
                 type="text"
                 id="contact-subject"
                 name="subject"
-                placeholder="What's this about?"
+                placeholder="What’s this about?"
                 value={formData.subject}
                 onChange={handleChange}
                 required
@@ -168,7 +168,7 @@ const Contact = () => {
             </div>
             <button type="submit" className="btn btn-primary form-submit">
               <FiSend />
-              Send Message
+              Send message
             </button>
           </motion.form>
         </div>

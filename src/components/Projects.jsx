@@ -18,6 +18,7 @@ const Projects = () => {
       image: hmsBanner,
       liveUrl: 'https://hospital-administration-beige.vercel.app/',
       codeUrl: 'https://github.com/abinivesh1696/Hospital-Administration-THIS',
+      featured: true,
     },
     {
       title: 'Job Portal Website',
@@ -30,6 +31,7 @@ const Projects = () => {
       image: connectWithBanner,
       liveUrl: 'https://connect-with-job-portal.vercel.app/',
       codeUrl: 'https://github.com/abinivesh1696/ConnectWith-Job-portal',
+      featured: false,
     },
     {
       title: 'Skill Swap Web',
@@ -42,6 +44,7 @@ const Projects = () => {
       image: skillSwapBanner,
       liveUrl: 'https://skill-swap-yuph.vercel.app/',
       codeUrl: 'https://github.com/abinivesh1696/SkillSwap',
+      featured: false,
     },
   ]
 
@@ -64,14 +67,14 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Some of the projects I've built and contributed to
+          A selection of product-focused builds and problem-solving prototypes.
         </motion.p>
 
         <div className="projects-grid">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              className="glass-card project-card"
+              className={`glass-card project-card ${project.featured ? 'featured' : ''}`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -93,10 +96,15 @@ const Projects = () => {
                   </div>
                 )}
               </div>
+
               <div className="project-content">
+                <div className="project-label-row">
+                  {project.featured && <span className="project-feature-badge">Featured</span>}
+                  <span className="project-period">{project.period}</span>
+                </div>
                 <h3 className="project-title">{project.title}</h3>
-                <p className="project-period">{project.period}</p>
                 <p className="project-description">{project.description}</p>
+
                 <div className="project-tech">
                   {project.tech.map((t) => (
                     <span key={t} className="project-tech-tag">
@@ -104,6 +112,7 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+
                 <div className="project-links">
                   <a
                     href={project.codeUrl || '#'}
@@ -111,15 +120,15 @@ const Projects = () => {
                     rel={project.codeUrl ? 'noopener noreferrer' : undefined}
                     className="project-link"
                   >
-                    <FiGithub /> Code-GitHub repository
+                    <FiGithub /> GitHub
                   </a>
                   <a
                     href={project.liveUrl || '#'}
                     target={project.liveUrl ? '_blank' : undefined}
                     rel={project.liveUrl ? 'noopener noreferrer' : undefined}
-                    className="project-link"
+                    className="project-link primary"
                   >
-                    <FiExternalLink /> Live Demo deployment
+                    <FiExternalLink /> Live Demo
                   </a>
                 </div>
               </div>

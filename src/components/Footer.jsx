@@ -1,12 +1,30 @@
 import { FaLinkedinIn, FaGithub, FaEnvelope } from 'react-icons/fa'
 
 const Footer = () => {
+  const quickLinks = [
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' },
+  ]
+
   return (
     <footer className="footer">
-      <div className="container">
-        <p className="footer-text">
-          © {new Date().getFullYear()} <span>ABINIVESH KV</span>
-        </p>
+      <div className="container footer-shell">
+        <div>
+          <p className="footer-text">
+            © {new Date().getFullYear()} <span>ABINIVESH KV</span>
+          </p>
+        </div>
+
+        <nav className="footer-nav" aria-label="Footer navigation">
+          {quickLinks.map((link) => (
+            <a key={link.label} href={link.href} className="footer-link">
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
         <div className="footer-social">
           <a
             href="https://www.linkedin.com/in/abinivesh-kv"

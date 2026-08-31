@@ -1,13 +1,18 @@
 import { motion } from 'framer-motion'
-import { FiMail, FiArrowRight, FiEye } from 'react-icons/fi'
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs } from 'react-icons/fa'
+import { FiMail, FiArrowRight, FiExternalLink } from 'react-icons/fi'
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import profilePhoto from '../assets/portfolio-image1.png'
 import resume from '../assets/ABINIVESH_FullStack.pdf'
 
 const Hero = () => {
+  const socialLinks = [
+    { label: 'GitHub', href: 'https://github.com/abinivesh1696', icon: <FaGithub /> },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/abinivesh-kv', icon: <FaLinkedinIn /> },
+  ]
+
   return (
     <section className="hero" id="home">
-      <div className="container">
+      <div className="container hero-layout">
         <motion.div
           className="hero-content"
           initial={{ opacity: 0, x: -60 }}
@@ -16,40 +21,61 @@ const Hero = () => {
         >
           <div className="hero-badge">
             <span className="dot"></span>
-            Available for Opportunities
+            Available for opportunities
           </div>
+
           <h1 className="hero-title">
-            Hi, I'm
+            Hi, I’m
             <span className="hero-name"> ABINIVESH KV</span>
           </h1>
-          <p className="hero-role">Full Stack Programmer</p>
+
+          <p className="hero-role">Full Stack Developer</p>
+
           <p className="hero-description">
-            Building end-to-end web applications using React, Node.js, Express,
-            and modern databases (MongoDB / MySQL). Experienced with authentication,
-            API design, and deploying full-stack apps to Vercel and Render.
+            I build responsive, end-to-end web applications with React, Node.js, Express,
+            and modern databases like MongoDB and MySQL. My focus is on creating clean user experiences,
+            reliable APIs, and maintainable code that works in production.
           </p>
+
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">
               <FiMail />
-              Get In Touch
+              Get in touch
             </a>
             <a href={resume} className="btn btn-outline" target="_blank" rel="noopener noreferrer" aria-label="View resume">
-              <FiEye />
-              View Resume
+              <FiExternalLink />
+              View resume
             </a>
-            <a href="#projects" className="btn btn-outline">
+            <a href="#projects" className="btn btn-ghost">
               <FiArrowRight />
-              View Projects
+              View projects
             </a>
           </div>
+
+          <div className="hero-socials" aria-label="Social links">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label={link.label}
+                title={link.label}
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
+
           <div className="hero-stats">
             <div className="stat-item">
               <div className="stat-value">6+</div>
-              <div className="stat-label">Months Internship Experience</div>
+              <div className="stat-label">Months internship</div>
             </div>
             <div className="stat-item">
-              <div className="stat-value">2</div>
-              <div className="stat-label">Full-Stack Projects</div>
+              <div className="stat-value">3</div>
+              <div className="stat-label">Project builds</div>
             </div>
             <div className="stat-item">
               <div className="stat-value">10+</div>
@@ -74,37 +100,38 @@ const Hero = () => {
               />
             </div>
             <div className="hero-avatar-glow"></div>
+
             <motion.div
               className="floating-icon"
-              animate={{ y: [-10, 10, -10] }}
+              animate={{ y: [-8, 8, -8] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             >
               <FaReact color="#61DAFB" />
             </motion.div>
             <motion.div
               className="floating-icon"
-              animate={{ y: [10, -10, 10] }}
+              animate={{ y: [8, -8, 8] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
             >
               <FaJs color="#F7DF1E" />
             </motion.div>
             <motion.div
               className="floating-icon"
-              animate={{ y: [-8, 12, -8] }}
+              animate={{ y: [-6, 6, -6] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
             >
               <FaHtml5 color="#E34F26" />
             </motion.div>
             <motion.div
               className="floating-icon"
-              animate={{ y: [12, -8, 12] }}
+              animate={{ y: [6, -6, 6] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
             >
               <FaCss3Alt color="#1572B6" />
             </motion.div>
             <motion.div
               className="floating-icon"
-              animate={{ y: [-12, 8, -12] }}
+              animate={{ y: [-10, 10, -10] }}
               transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}
             >
               <FaNodeJs color="#339933" />

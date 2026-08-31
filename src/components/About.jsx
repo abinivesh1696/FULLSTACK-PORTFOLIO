@@ -5,13 +5,13 @@ const About = () => {
   const codeLines = [
     { num: 1, content: <><span className="code-keyword">const</span> <span className="code-variable">developer</span> <span className="code-bracket">=</span> <span className="code-bracket">{'{'}</span></> },
     { num: 2, content: <>&nbsp;&nbsp;name: <span className="code-string">"ABINIVESH KV"</span>,</> },
-    { num: 3, content: <>&nbsp;&nbsp;role: <span className="code-string">"Full Stack Programmer"</span>,</> },
+    { num: 3, content: <>&nbsp;&nbsp;role: <span className="code-string">"Full Stack Developer"</span>,</> },
     { num: 4, content: <>&nbsp;&nbsp;location: <span className="code-string">"Chennai, TN"</span>,</> },
     { num: 5, content: <>&nbsp;&nbsp;education: <span className="code-string">"B.E. CSE"</span>,</> },
-    { num: 6, content: <>&nbsp;&nbsp;passion: <span className="code-string">"Building full-stack apps"</span>,</> },
+    { num: 6, content: <>&nbsp;&nbsp;focus: <span className="code-string">"Full-stack product development"</span>,</> },
     { num: 7, content: <>&nbsp;&nbsp;available: <span className="code-keyword">true</span>,</> },
     { num: 8, content: <><span className="code-bracket">{'}'}</span>;</> },
-    { num: 9, content: <><span className="code-comment">// Let's build something great!</span></> },
+    { num: 9, content: <><span className="code-comment">// building with purpose</span></> },
   ]
 
   return (
@@ -33,7 +33,7 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          A quick overview of who I am and what drives me
+          A focused developer building practical, user-first web experiences.
         </motion.p>
 
         <div className="about-grid">
@@ -71,20 +71,18 @@ const About = () => {
             transition={{ duration: 0.7 }}
           >
             <h3>
-              Crafting Digital Experiences with <span className="gradient-text">Passion</span>
+              Building <span className="gradient-text">clean digital products</span> from idea to deployment.
             </h3>
             <p className="about-text">
-              I'm a Full Stack Programmer with 6 months of internship experience at Besant
-              Technologies. I build end-to-end web applications using React.js for the
-              frontend and Node.js/Express on the backend with MongoDB or MySQL. I've implemented
-              JWT-based authentication, RESTful APIs, and production deployments on Vercel
-              and Render.
+              I’m a Full Stack Programmer with 6 months of internship experience at Besant Technologies.
+              I build end-to-end web applications using React.js for the frontend and Node.js/Express on the backend,
+              with MongoDB and MySQL for data storage and application logic. My work includes JWT-based authentication,
+              REST API development, and deployment workflows on Vercel and Render.
             </p>
             <p className="about-text">
-              I combine solid CS fundamentals with practical experience in building
-              reusable components, designing APIs, and optimizing database queries. I'm
-              a quick learner and team player who values clean, maintainable code and
-              delivering reliable full-stack solutions.
+              I enjoy building reusable interfaces, designing APIs, and creating solutions that are practical, scalable,
+              and maintainable. I’m a quick learner who values clean code, effective teamwork, and delivering products that
+              make an impact.
             </p>
 
             <div className="about-info-grid">
@@ -113,7 +111,7 @@ const About = () => {
                 <FiBriefcase className="about-info-icon" />
                 <div>
                   <div className="about-info-label">Experience</div>
-                  <div className="about-info-value">6+ Months</div>
+                  <div className="about-info-value">6+ months</div>
                 </div>
               </div>
             </div>

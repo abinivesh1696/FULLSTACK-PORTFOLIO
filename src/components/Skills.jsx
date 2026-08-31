@@ -1,37 +1,31 @@
 import { motion } from 'framer-motion'
-import { FiCode, FiTool, FiUsers } from 'react-icons/fi'
+import { FiCode, FiServer, FiDatabase, FiTool } from 'react-icons/fi'
 
 const Skills = () => {
   const categories = [
     {
       icon: <FiCode />,
       iconClass: 'tech',
-      title: 'Technical Skills',
-      skills: [
-        'HTML5',
-        'CSS3',
-        'JavaScript (ES6+)',
-        'TypeScript',
-        'React.js',
-        'Node.js',
-        'Express.js',
-        'Java',
-        'SQL / MySQL',
-        'MongoDB',
-        'JWT Authentication',
-      ],
+      title: 'Frontend Development',
+      skills: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'TypeScript', 'React.js', 'Bootstrap'],
+    },
+    {
+      icon: <FiServer />,
+      iconClass: 'backend',
+      title: 'Backend & APIs',
+      skills: ['Node.js', 'Express.js', 'Java', 'REST APIs', 'JWT Authentication'],
+    },
+    {
+      icon: <FiDatabase />,
+      iconClass: 'data',
+      title: 'Database & Deployment',
+      skills: ['SQL / MySQL', 'MongoDB', 'Vercel', 'Render', 'AWS'],
     },
     {
       icon: <FiTool />,
       iconClass: 'tools',
-      title: 'Tools & Technologies',
-      skills: ['Git & GitHub', 'VS Code', 'REST APIs', 'NPM', 'Vercel', 'Render', 'AWS'],
-    },
-    {
-      icon: <FiUsers />,
-      iconClass: 'soft',
-      title: 'Soft Skills',
-      skills: ['Good Communication', 'Leadership', 'Team Oriented', 'Result Driven', 'Hard Working', 'Problem Solving', 'Quick Learner'],
+      title: 'Tools & Workflow',
+      skills: ['Git & GitHub', 'VS Code', 'NPM', 'Good Communication', 'Leadership', 'Problem Solving'],
     },
   ]
 
@@ -54,7 +48,7 @@ const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Technologies and abilities I bring to every project
+          Core technologies and strengths I bring to product-focused development.
         </motion.p>
 
         <div className="skills-grid">

@@ -8,10 +8,20 @@ const Navbar = ({ activeSection, isDarkMode, setIsDarkMode }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      setScrolled(window.scrollY > 30)
     }
+
+    const handleResize = () => {
+      if (window.innerWidth > 768) setMenuOpen(false)
+    }
+
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
   const navItems = [
@@ -27,22 +37,27 @@ const Navbar = ({ activeSection, isDarkMode, setIsDarkMode }) => {
     setMenuOpen(false)
     const element = document.getElementById(id)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
-      <div className="container">
-        <a href="#home" className="nav-logo" onClick={() => handleNavClick('home')}>
+      <div className="container nav-shell">
+        <a href="#home" className="nav-logo" onClick={(e) => {
+          e.preventDefault()
+          handleNavClick('home')
+        }} aria-label="Go to home section">
           &lt;AK /&gt;
         </a>
+
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           {navItems.map((item) => (
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
                 className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
+                aria-current={activeSection === item.id ? 'page' : undefined}
                 onClick={(e) => {
                   e.preventDefault()
                   handleNavClick(item.id)
@@ -53,33 +68,38 @@ const Navbar = ({ activeSection, isDarkMode, setIsDarkMode }) => {
             </li>
           ))}
         </ul>
+
+        <div className="nav-actions">
+          <a
+            className="resume-btn"
+            href={resume}
+            download
+            aria-label="Download resume"
+            title="Download resume"
+          >
+            <FiDownload size={18} />
+            <span className="resume-text">Resume</span>
+          </a>
+
+          <button
+            className="theme-toggle"
+            onClick={() => setIsDarkMode(!isDarkMode)}
+            aria-label="Toggle theme"
+            title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {isDarkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
+          </button>
+        </div>
+
         <button
           className="nav-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
         >
           <span></span>
           <span></span>
           <span></span>
-        </button>
-        <a
-          className="resume-btn"
-          href={resume}
-          download
-          aria-label="Download resume"
-          title="Download resume"
-        >
-          <FiDownload size={18} />
-          <span className="resume-text">RESUME</span>
-        </a>
-
-        <button
-          className="theme-toggle"
-          onClick={() => setIsDarkMode(!isDarkMode)}
-          aria-label="Toggle theme"
-          title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-        >
-          {isDarkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
         </button>
       </div>
     </nav>
