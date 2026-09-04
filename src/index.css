@@ -593,26 +593,6 @@ ul {
   z-index: -1;
 }
 
-.floating-icon {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  background: rgba(11, 16, 32, 0.78);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  box-shadow: var(--shadow-soft);
-  font-size: 1.4rem;
-}
-
-.floating-icon:nth-child(1) { top: 25%; left: -20px; }
-.floating-icon:nth-child(2) { top: 5%; right: 4%; }
-.floating-icon:nth-child(3) { bottom: 2%; left: -20px; }
-.floating-icon:nth-child(4) { bottom: 18%; right: 3%; }
-.floating-icon:nth-child(5) { left: 50%; top: -18px; transform: translateX(-50%); }
-
 .about-grid {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;

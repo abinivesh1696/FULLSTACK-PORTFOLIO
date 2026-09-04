@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { FiMail, FiArrowRight, FiExternalLink } from 'react-icons/fi'
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import profilePhoto from '../assets/portfolio-image1.png'
 import resume from '../assets/ABINIVESH_FullStack.pdf'
 
@@ -100,42 +100,6 @@ const Hero = () => {
               />
             </div>
             <div className="hero-avatar-glow"></div>
-
-            <motion.div
-              className="floating-icon"
-              animate={{ y: [-8, 8, -8] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <FaReact color="#61DAFB" />
-            </motion.div>
-            <motion.div
-              className="floating-icon"
-              animate={{ y: [8, -8, 8] }}
-              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <FaJs color="#F7DF1E" />
-            </motion.div>
-            <motion.div
-              className="floating-icon"
-              animate={{ y: [-6, 6, -6] }}
-              transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <FaHtml5 color="#E34F26" />
-            </motion.div>
-            <motion.div
-              className="floating-icon"
-              animate={{ y: [6, -6, 6] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <FaCss3Alt color="#1572B6" />
-            </motion.div>
-            <motion.div
-              className="floating-icon"
-              animate={{ y: [-10, 10, -10] }}
-              transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <FaNodeJs color="#339933" />
-            </motion.div>
           </div>
         </motion.div>
       </div>
