@@ -1374,8 +1374,3 @@ ul {
 [data-theme='light'] .footer {
   background: rgba(255, 255, 255, 0.3);
 }
-
-.hero-socials .social-link {
-  width: 42px;
-  height: 42px;
-}
