@@ -521,6 +521,14 @@ ul {
   color: var(--text-inverse);
 }
 
+.hero-socials .social-link {
+  width: auto;
+  min-width: 42px;
+  height: 42px;
+  gap: 8px;
+  padding: 0 14px;
+}
+
 .hero-stats {
   display: flex;
   flex-wrap: wrap;

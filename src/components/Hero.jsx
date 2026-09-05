@@ -64,6 +64,7 @@ const Hero = () => {
                 title={link.label}
               >
                 {link.icon}
+                <span>{link.label}</span>
               </a>
             ))}
           </div>
