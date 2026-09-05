@@ -523,10 +523,21 @@ ul {
 
 .hero-socials .social-link {
   width: auto;
-  min-width: 42px;
-  height: 42px;
-  gap: 8px;
-  padding: 0 14px;
+  min-height: 52px;
+  height: auto;
+  gap: 10px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  background: rgba(106, 124, 255, 0.04);
+  border: 1px solid rgba(106, 124, 255, 0.24);
+}
+
+.hero-socials .social-link:hover {
+  background: rgba(106, 124, 255, 0.08);
+  border-color: rgba(106, 124, 255, 0.38);
+  color: var(--text-primary);
 }
 
 .hero-stats {

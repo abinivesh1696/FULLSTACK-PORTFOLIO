@@ -59,7 +59,7 @@ const Hero = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-link"
+                className="btn btn-outline social-link"
                 aria-label={link.label}
                 title={link.label}
               >
