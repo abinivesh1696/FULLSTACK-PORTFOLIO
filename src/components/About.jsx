@@ -74,14 +74,13 @@ const About = () => {
               Building <span className="gradient-text">clean digital products</span> from idea to deployment.
             </h3>
             <p className="about-text">
-              I’m a Full Stack Programmer with 6 months of internship experience at Besant Technologies.
+              hi, I’m a Full Stack Programmer with 6 months of internship experience at Besant Technologies.
               I build end-to-end web applications using React.js for the frontend and Node.js/Express on the backend,
               with MongoDB and MySQL for data storage and application logic. My work includes JWT-based authentication,
               REST API development, and deployment workflows on Vercel and Render.
             </p>
             <p className="about-text">
-              I enjoy building reusable interfaces, designing APIs, and creating solutions that are practical, scalable,
-              and maintainable. I’m a quick learner who values clean code, effective teamwork, and delivering products that
+              hi, I’m a quick learner who values clean code, effective teamwork, and delivering products that
               make an impact.
             </p>
 
